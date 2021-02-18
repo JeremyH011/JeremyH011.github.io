@@ -1,2 +1,4 @@
-main = document.getElementById("container");
-main.innerHTML = "Test"
+window.onload = function(){
+    body = document.body
+    body.className += " loaded";
+}
