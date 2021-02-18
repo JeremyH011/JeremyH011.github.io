@@ -1,2 +1,2 @@
 main = document.getElementById("container");
-main.innerHTML = "Hello World"
+main.innerHTML = "Test"
