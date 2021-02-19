@@ -6,7 +6,7 @@ window.onload = function(){
 loadTimeline();
 InitializeTabs();
 
-// Get the element with id="defaultOpen" and click on it
+// Default element to open
 document.getElementById("experience").click();
 
 function InitializeTabs() {
@@ -43,9 +43,19 @@ function InitializeTabs() {
 
         });
 
-        button.innerHTML = `<h1>${item}</h1>`
+        button.innerHTML = `<h2>${item}</h2>`
         tabs.appendChild(button);
-    }); 
+    });
+    
+    tabsY = tabs.offsetTop;
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset >= tabsY) {
+            tabs.classList.add("sticky")
+        } else {
+            tabs.classList.remove("sticky");
+        }
+    });
+
 }
 
 function loadTimeline() {

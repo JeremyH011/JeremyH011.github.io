@@ -1,5 +1,6 @@
 /* The actual timeline (the vertical ruler) */
 .timeline {
+    padding-top: 10em;
     background-color: #0c2343;
     width: 100%;
     box-sizing: border-box;
