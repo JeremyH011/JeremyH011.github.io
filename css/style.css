@@ -57,3 +57,7 @@ body {
     width: 100%;
     border: 2px solid gray;
 }
+
+.empty {
+    opacity: 0;
+}
