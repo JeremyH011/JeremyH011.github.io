@@ -1,63 +1,36 @@
-body {
-    font-family: Helvetica, sans-serif;
-
-    opacity: 0;
-    -moz-transition: opacity 1.5s;
-    -webkit-transition: opacity 1.5s;
-    -o-transition: opacity 1.5s;
-    transition: opacity 1.5s;
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
 }
 
-.header {
-    margin: auto;
-    padding: 4em;
-    max-width: 810px;
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
 }
 
-.card {
-  text-align: center;
-  background-color: #000000;
-  max-width: 250px;
-  display: inline-block;
-  margin: 0.1em;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
 }
 
-#profilePic {
-    width: 80%;
-    border-radius: 50%;
-    border: 5px solid white;
-    margin: 1em
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
 }
 
-#headerLeft img, #headerRight img {
-    border: 5px solid gray;
+/* Style the tab content */
+.hidden {
+    display: none;
 }
 
-#cardProfile {
-    background-color: white;
-    color: black;
-    padding: 0.05em;
-}
-
-.block {
-    background-color: black;
-    height: 1.5em;
-}
-
-.title {
-    color: rgb(87, 84, 84);
-}
-
-.loaded {
-    opacity: 1!important;
-}
-
-.linebreak {
-    width: 100%;
-    border: 2px solid gray;
-}
-
-.empty {
-    opacity: 0;
+div.active {
+    display: block;
 }
