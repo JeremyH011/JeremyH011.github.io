@@ -1,0 +1,18 @@
+name,proficiency,src,description,category
+JavaScript,4,https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png,3+ years of Web Development (Node.js included),hard
+Python,4,images/python.PNG,"3+ years of Python experience (D3, Matplotlib, Pandas included)",hard
+C/C++,4,images/c.PNG,4+ years of C/C++ experience<br/>.,hard
+Git,4,images/git.png,5+ years of experience with version control,hard
+HTML & CSS,4,images/html.png,5+ years of experience with HTML and CSS,hard
+SQL,3,images/sql.png,2+ years of experience with databases,hard
+MongoDB,3,images/mongo.PNG,2+ years of experience with databases,hard
+Java,3,images/java.JPG,3+ years of experience with Java (particularly for Android Dev.),hard
+Verilog,3,images/verilog.png,2+ years of experience with Verilog,hard
+Swift,2,https://developer.apple.com/swift/images/swift-og.png,2+ years of experience with Swift (particularly for iOS Dev.),hard
+AWS,2,images/aws.png,2+ years of experience on cloud-based computing,hard
+Azure,2,images/azure.png,2+ years of experience on cloud-based computing,hard
+Agile,4,images/icon.png,4+ years of experience working <br/> in Agile-based projects,soft
+Teamwork,4,images/icon.png,Strong teamwork skills<br/>.,soft
+Tech. Comm.,4,images/icon.png,3+ years of experience with technical docs,soft
+Debugging,4,images/icon.png,Strong debugging and problem solving skills,soft
+Detailed,4,images/icon.png,Sharp attention to detail </br> .,soft

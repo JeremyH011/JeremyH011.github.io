@@ -1,0 +1,38 @@
+.skillCard {
+    text-align: center;
+    background-color: #0c2343;
+    max-width: 250px;
+    display: inline-block;
+    margin: 4em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.prof4 {
+    border: 7px solid rgb(255, 187, 0);
+}
+
+.prof3 {
+    border: 7px solid rgb(34, 124, 228);
+}
+
+.prof2 {
+    border: 7px solid rgb(228, 34, 34);
+}
+
+.skillHeader h1{
+    padding-left: 1em; 
+    padding-top: 1em;
+    margin: 0px!important;
+}
+
+img.skillPic {
+      width: 80%;
+      border-radius: 50%;
+      margin: 1em;
+}
+
+div.skillCardProfile {
+    background-color: white;
+    color: black;
+    padding: 0.05em;
+}

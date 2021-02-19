@@ -4,14 +4,15 @@ window.onload = function(){
 }   
 
 loadTimeline();
-InitializeTabs();
+initializeSkills();
+initializeTabs();
 
 // Default element to open
-document.getElementById("experience").click();
+document.getElementById("skills").click();
 
-function InitializeTabs() {
+function initializeTabs() {
     tabs = document.getElementById("master");
-    tabNames = ['Skills', 'Experience', 'Projects'];
+    tabNames = ['Skills', 'Experience', 'Portfolio'];
 
     tabNames.forEach(item => {
         
@@ -49,7 +50,7 @@ function InitializeTabs() {
     
     tabsY = tabs.offsetTop;
     window.addEventListener('scroll', () => {
-        if (window.pageYOffset >= tabsY) {
+        if (window.pageYOffset > tabsY) {
             tabs.classList.add("sticky")
         } else {
             tabs.classList.remove("sticky");
@@ -89,5 +90,58 @@ function loadTimeline() {
         });
 
     });
+}
 
+function initializeSkills(){
+    techskills = document.getElementById('technicalSkills');
+    techHeader = document.createElement('div');
+    techHeader.classList.add('skillHeader');
+    techHeader.innerHTML = "<h1>Technical Skills</h1>"
+    techskills.appendChild(techHeader);
+
+    softSkills = document.getElementById('softSkills'); 
+    softHeader = document.createElement('div');
+    softHeader.classList.add('skillHeader');
+    softHeader.innerHTML = "<h1>Soft Skills</h1>"
+    softSkills.appendChild(softHeader);
+
+    d3.csv('data/skills.csv').then(data => {
+        data.forEach((skill) => {
+
+            if(skill.category == 'hard'){
+                techskills.appendChild(createCard(skill.src,skill.name,skill.name, 
+                    skill.description, skill.proficiency));
+            }
+            else {
+                softSkills.appendChild(createCard(skill.src,skill.name,skill.name, 
+                    skill.description, skill.proficiency));
+            }
+        })
+    })
+
+    
+}
+
+function createCard(imageSrc, id, title, description, prof){
+    card = document.createElement('div');
+    card.classList.add('skillCard');
+    
+    card.id = id;
+
+    img = document.createElement('img');
+    img.classList.add('skillPic');
+    img.classList.add(`prof${prof}`);
+    img.src = imageSrc;
+
+    cardProfile = document.createElement('div');
+    cardProfile.classList.add('skillCardProfile');
+    cardProfile.innerHTML = `
+                            <h1>${title}</h1>
+                            <p>${description}</p>
+                            `
+    
+    card.appendChild(img);
+    card.appendChild(cardProfile);
+
+    return card;
 }
