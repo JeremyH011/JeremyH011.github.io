@@ -5,6 +5,7 @@ window.onload = function(){
 
 loadTimeline();
 initializeSkills();
+createPortfolio();
 initializeTabs();
 
 // Default element to open
@@ -65,7 +66,7 @@ function loadTimeline() {
     //Load data from CSV file asynchronously and render chart
     d3.csv('data/experience.csv').then(data => {
         data.forEach((d, index) => {
-            d.year = +d.year;
+            d.year = d.year;
 
             container = document.createElement("div");
             container.classList.add("container");
@@ -144,4 +145,22 @@ function createCard(imageSrc, id, title, description, prof){
     card.appendChild(cardProfile);
 
     return card;
+}
+
+function createPortfolio(){
+    let portfolio = document.getElementById('portfolio');
+    d3.csv('data/portfolio.csv').then(data => {
+        data.forEach((project) => {
+            let projectDiv = document.createElement('div');
+            projectDiv.innerHTML = `
+                                    <h2>${project.name}</h2>
+                                    <h3>${project.year}</h3>
+                                    <p>${project.desc}</p>
+                                    <p><b>Technology Used</b>: ${project.tech}</p>
+                                    <p><b>Repo Link</b>: <a href="${project.repo}">${project.repo}</a></p>
+                                    `
+            projectDiv.classList.add('project');
+            portfolio.appendChild(projectDiv);
+        })
+    })
 }
