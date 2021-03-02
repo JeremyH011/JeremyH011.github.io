@@ -6,17 +6,15 @@
 
 .card {
   text-align: center;
-  background-color: #000000;
   max-width: 250px;
   display: inline-block;
   margin: 0.1em;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 img.profilePic {
     width: 80%;
     border-radius: 50%;
-    border: 5px solid white;
+    border: 5px solid gray;;
     margin: 1em
 }
 
@@ -25,18 +23,16 @@ img.profilePic {
 }
 
 div.cardProfile {
-    background-color: white;
-    color: black;
+    color: white;
     padding: 0.05em;
 }
 
 .block {
-    background-color: black;
     height: 1.5em;
 }
 
 .title {
-    color: rgb(87, 84, 84);
+    color: white;
 }
 
 .loaded {
@@ -50,4 +46,39 @@ div.cardProfile {
 
 .empty {
     opacity: 0;
+}
+
+.background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/back.JPG");
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.contact {
+    font-weight: bold;
+    padding: 1em;
+    font-size: 20px;
+}
+
+.contact a {
+    color: white;
+}
+
+.contact a:link {
+    text-decoration: none;
+}
+  
+.contact a:visited {
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.contact a:active {
+    text-decoration: underline;
 }
