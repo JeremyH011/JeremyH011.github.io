@@ -157,7 +157,7 @@ function createPortfolio(){
                                     <h3>${project.year}</h3>
                                     <p>${project.desc}</p>
                                     <p><b>Technology Used</b>: ${project.tech}</p>
-                                    <p><b>Repo Link</b>: <a href="${project.repo}">${project.repo}</a></p>
+                                    <p><b>Link</b>: <a href="${project.repo}">${project.repo}</a></p>
                                     `
             projectDiv.classList.add('project');
             portfolio.appendChild(projectDiv);
